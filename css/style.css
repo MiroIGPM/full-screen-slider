@@ -14,15 +14,14 @@ body{
 }
 
 .slider{
-    position: relative;  /** ide relativ zato sto cemo unutar njega elemente pozicionirati aposlutno **/
+    position: relative; 
     overflow: hidden;
-    height: 100vh;  /** podesava visinu na citav viewport **/
+    height: 100vh;  
     width: 100vw;
 }
 
 
-/** sve i jedan slide se postavlja apsolutno unutar slider diva tako da krece i samog ljevog coska, top 0 ljevo 0 i stavlja mu se i visina i duzina na 100% tako da ispuni 
-citav div, opasiti se stavlja na 0 kako bi sve i jedan bio providan tek kada slajd dobije klasu "curent" opasiti postaje 1 i slajd postaje vidljiv" **/
+
 
 .slide {
   position: absolute;
@@ -39,8 +38,7 @@ citav div, opasiti se stavlja na 0 kako bi sve i jedan bio providan tek kada sla
 }
 
 
-/** pozicioniranje text contenta, isot je aposilutno stavljeno u odnosu na slider div, i maknuto je sa ekrana sa -600px lejvo i pojaviljivace se ease in u zavisnost
-koji slide ima klasu current **/
+
 
 .slide .content{
     position: absolute;
@@ -57,11 +55,11 @@ koji slide ima klasu current **/
     margin-bottom: 10px;
 }
 
-/** definisanje css kad content dobije tj kada parent div slide dobije klasu current **/
+
 .slide.current .content{
     opacity: 1;
     transform: translateX(600px); 
-    transition: all 0.7s ease-in-out  0.3s; /**  ovde ide transition all zato sto su se primjenjuje transition na sve propertije **/
+    transition: all 0.7s ease-in-out  0.3s; 
 }
 
 .buttons button#next{
